@@ -5612,7 +5612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49860760f3defe74fb8006725bda1059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMovementSpeed: 30
+  maxMovementSpeed: 26
   movementAcceleration: 60
   movementDeacceleration: 25
   maxRotationSpeed: 160
@@ -5620,7 +5620,7 @@ MonoBehaviour:
   rotationAcceleration: 650
   rotationDeacceleration: 400
   normalHandling: 11
-  driftHandling: 1.5
+  driftHandling: 1.3
   driftParticles: {fileID: 496234539}
   boostParticles: {fileID: 1807270382}
   rb: {fileID: 906534218}
@@ -6222,8 +6222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1707649036}
-  baseFOV: 10
-  maxFOV: 15
+  baseFOV: 11
+  maxFOV: 17
 --- !u!1 &1807270379
 GameObject:
   m_ObjectHideFlags: 0
