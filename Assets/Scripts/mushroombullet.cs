@@ -9,7 +9,8 @@ public class mushroombullet : Bullet
     private bool straight;
     private void OnEnable()
     {
-        straight = false;
+        straight = true;
+        Invoke("Home", 1f);
         Invoke("Straight", 3f);
         Invoke("Destroy", 5f);
     }
@@ -22,7 +23,9 @@ public class mushroombullet : Bullet
             transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * Mathf.Atan2(direction.y, direction.x) - 90f);
         }
     }
-
+    void Home() {
+        straight = false;
+    }
     void Straight() {
         straight = true;
         moveSpeed *= speedMultiplier;
