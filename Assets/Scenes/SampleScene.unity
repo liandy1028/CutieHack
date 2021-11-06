@@ -5731,8 +5731,8 @@ MonoBehaviour:
   startAngle: 0
   endAngle: 0
   FiringPoint: {fileID: 1687849687}
-  firerate: 0.2
-  bulletspeed: 100
+  firerate: 0
+  bulletspeed: 0
 --- !u!1 &924498084
 GameObject:
   m_ObjectHideFlags: 0
