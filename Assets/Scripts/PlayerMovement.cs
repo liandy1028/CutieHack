@@ -46,12 +46,12 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = transform.up * Mathf.Max(1f,rb.velocity.magnitude);
             boostParticles.Play();
         }
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if(Input.GetButtonDown("Drift"))
         {
             isDrifting = true;
             driftParticles.Play();
         }
-        else if(Input.GetKeyUp(KeyCode.LeftShift))
+        else if(Input.GetButtonUp("Drift"))
         {
             isDrifting = false;
             driftParticles.Stop();
