@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerFireBullets : MonoBehaviour
+public class MinionFireBullet : MonoBehaviour
 {
     [SerializeField]
     private int bulletsAmount = 10;
@@ -36,15 +36,14 @@ public class PlayerFireBullets : MonoBehaviour
             Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
             Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
-            GameObject bul = BulletPoolManager.instance.Pools["cutieBullet"].GetBullet();
+            GameObject bul = BulletPoolManager.instance.Pools["minionBullet"].GetBullet();
                 bul.transform.position = FiringPoint.transform.position;
                 // bul.transform.rotation = transform.rotation;
                 // bul.transform.rotation = Quaternion.Euler(0,0,Mathf.Rad2Deg * Mathf.Atan2(bulDirY,bulDirX));
                 bul.SetActive(true);
-                bul.GetComponent<Bullet>().SetMoveDirection(bulDir, bulletspeed, GetComponentInParent<Rigidbody2D>().velocity);
+                bul.GetComponent<Bullet>().SetMoveDirection(bulDir, bulletspeed);
 
             angle += angleStep;
         }
     }
-
 }
