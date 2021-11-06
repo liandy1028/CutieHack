@@ -31,12 +31,12 @@ public class PlayerFireBullets : MonoBehaviour
             Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
             Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
-            GameObject bul = bulletpool.bulletPoolInstance.GetBullet();
+            GameObject bul = BulletPoolManager.instance.Pools["cutieBullet"].GetBullet();
                 bul.transform.position = transform.position;
                 // bul.transform.rotation = transform.rotation;
                 // bul.transform.rotation = Quaternion.Euler(0,0,Mathf.Rad2Deg * Mathf.Atan2(bulDirY,bulDirX));
                 bul.SetActive(true);
-                bul.GetComponent<mushroombullet>().SetMoveDirection(bulDir, 20);
+                bul.GetComponent<cutiebullet>().SetMoveDirection(bulDir, 20);
 
             angle += angleStep;
         }

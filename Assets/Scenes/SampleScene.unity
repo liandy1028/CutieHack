@@ -169,7 +169,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -280,11 +280,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.112750545, y: -0.06389198, z: -1.2527838}
+  m_LocalScale: {x: 0.12527838, y: 0.12527838, z: 0.12527838}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1228093571}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &738832153
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 738832155}
   - component: {fileID: 738832154}
   m_Layer: 0
-  m_Name: BulletPool
+  m_Name: BulletPoolManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,10 +313,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 738832153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fc78cca4f086f44bb383f23fe5b7afa, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ee4659b4e9b18643b5a952d83d3c9aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledBullet: {fileID: 6187147303679201, guid: 55464d5709306894a91dbd6f1118ee2c, type: 3}
+  pools:
+  - key: mushroomBullet
+    prefab: {fileID: 6187147303679201, guid: 55464d5709306894a91dbd6f1118ee2c, type: 3}
+  - key: cutieBullet
+    prefab: {fileID: 6187147303679201, guid: 8db30496a18b2ef4894c4a294e6610b4, type: 3}
 --- !u!4 &738832155
 Transform:
   m_ObjectHideFlags: 0
@@ -329,7 +333,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &906534216
 GameObject:
@@ -450,7 +454,7 @@ Transform:
   m_LocalScale: {x: 0.3263274, y: 0.3263274, z: 0.3263274}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &906534221
 MonoBehaviour:
@@ -537,7 +541,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1228093569
 GameObject:
@@ -617,9 +621,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.9, y: 0.51, z: 0}
   m_LocalScale: {x: 7.9822235, y: 7.9822235, z: 7.9822235}
-  m_Children: []
+  m_Children:
+  - {fileID: 519420032}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1350701831
 GameObject:
@@ -730,5 +735,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
