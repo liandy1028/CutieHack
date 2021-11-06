@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     private float currentMovementSpeed;
     private float currentRotationSpeed;
 
+    public ParticleSystem driftParticles;
+    public ParticleSystem boostParticles;
+
 
     public Rigidbody2D rb;
 
@@ -30,16 +33,24 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        float prevYAxis = yAxis;
         yAxis = Input.GetAxisRaw("Vertical");
         xAxis = Input.GetAxisRaw("Horizontal");
+        //Instant directional change
+        if(prevYAxis == 0 && yAxis > 0)
+        {
+            rb.velocity = transform.up * 1f;
+            boostParticles.Play();
+        }
         if(Input.GetKey(KeyCode.LeftShift))
         {
             isDrifting = true;
+            driftParticles.Play();
         }
         else
         {
             isDrifting = false;
+            driftParticles.Stop();
         }
 
     }
