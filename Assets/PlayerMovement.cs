@@ -4,29 +4,40 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float movementSpeed;
+    public float maxMovementSpeed;
+    public float movementAcceleration;
     public float rotationSpeed;
+
     public Rigidbody2D rb;
 
     float xAxis, yAxis;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private bool isDrifting = false;
+
 
     // Update is called once per frame
     void Update()
     {
         yAxis = Input.GetAxisRaw("Vertical");
         xAxis = Input.GetAxisRaw("Horizontal");
-        
-
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            isDrifting = true;
+            rb.drag = 0;
+        }
+        else
+        {
+            isDrifting = false;
+            rb.drag = 2;
+        }
     }
 
     void FixedUpdate() {
-        rb.AddForce(transform.up * movementSpeed * yAxis);
-        rb.AddTorque(-rotationSpeed * xAxis);
+        if(!isDrifting)
+        {
+            if(yAxis > 0)
+                rb.velocity = (transform.up * movementSpeed * yAxis);
+            rb.AddTorque(xAxis * -rotationSpeed);
+        }
     }
 }
