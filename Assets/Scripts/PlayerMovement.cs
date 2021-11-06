@@ -29,16 +29,20 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isDrifting = false;
 
+    private float boostTimer = 0f;
 
     // Update is called once per frame
     void Update()
     {
+        boostTimer -= Time.deltaTime;
         float prevYAxis = yAxis;
-        yAxis = Input.GetAxisRaw("Vertical");
-        xAxis = Input.GetAxisRaw("Horizontal");
+        yAxis = Mathf.Clamp(Input.GetAxisRaw("Vertical"),-1,1);
+        xAxis = Mathf.Clamp(Input.GetAxisRaw("Horizontal"),-1,1);
+
         //Instant directional change
-        if(prevYAxis == 0 && yAxis > 0)
+        if(prevYAxis == 0 && yAxis > 0 && boostTimer <= 0)
         {
+            boostTimer = 0.5f;
             rb.velocity = transform.up * Mathf.Max(1f,rb.velocity.magnitude);
             boostParticles.Play();
         }
