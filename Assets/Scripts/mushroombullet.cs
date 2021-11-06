@@ -15,7 +15,7 @@ public class mushroombullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 5f;
+    //    moveSpeed = 5f;
     }
 
     // Update is called once per frame
@@ -26,10 +26,13 @@ public class mushroombullet : MonoBehaviour
 
     public void SetMoveDirection(Vector2 dir)
     {
+        SetMoveDirection(dir, 5);
+    }
+    public void SetMoveDirection(Vector2 dir, float speed)
+    {
+        moveSpeed = speed;
         moveDirection = Vector2.up;
-        transform.rotation = Quaternion.Euler(0,0,Mathf.Rad2Deg * Mathf.Atan2(dir.y,dir.x) - 90f);
-        
-        // moveDirection = dir;
+        transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * Mathf.Atan2(dir.y, dir.x) - 90f);
     }
 
     private void Destroy()

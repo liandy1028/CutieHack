@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 906534219}
   - component: {fileID: 906534218}
   - component: {fileID: 906534217}
+  - component: {fileID: 906534221}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -362,8 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49860760f3defe74fb8006725bda1059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1.6
-  rotationSpeed: 1.84
+  movementSpeed: 15
+  rotationSpeed: 15
   rb: {fileID: 906534218}
 --- !u!50 &906534218
 Rigidbody2D:
@@ -451,6 +452,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &906534221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906534216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80733f52761a72a4c87cfa687af0aee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletsAmount: 1
+  startAngle: 0
+  endAngle: 0
 --- !u!1 &924498084
 GameObject:
   m_ObjectHideFlags: 0
