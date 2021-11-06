@@ -6082,9 +6082,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b50e12997ad6d46ae1da39e2a4e9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletsAmount: 10
-  startAngle: 90
-  endAngle: 270
+  bulletsAmount: 1
+  startAngle: 0
+  endAngle: 0
+  bulSpeed: 18.19
 --- !u!114 &1350701833
 MonoBehaviour:
   m_ObjectHideFlags: 0

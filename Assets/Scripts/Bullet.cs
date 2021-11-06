@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private Vector2 moveDirection;
-    private float moveSpeed;
+    protected Vector2 moveDirection;
+    protected float moveSpeed;
     Vector2 baseVelocity;
 
     private void OnEnable()
