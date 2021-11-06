@@ -11,6 +11,7 @@ public class FireBullets : MonoBehaviour
     private float startAngle = 90f, endAngle = 270f;
 
     private Vector2 bulletMoveDirection;
+    public float bulSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class FireBullets : MonoBehaviour
                 // bul.transform.rotation = transform.rotation;
                 // bul.transform.rotation = Quaternion.Euler(0,0,Mathf.Rad2Deg * Mathf.Atan2(bulDirY,bulDirX));
                 bul.SetActive(true);
-                bul.GetComponent<Bullet>().SetMoveDirection(bulDir);
+                bul.GetComponent<Bullet>().SetMoveDirection(bulDir, bulSpeed);
 
             angle += angleStep;
         }
