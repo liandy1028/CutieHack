@@ -39,20 +39,21 @@ public class PlayerMovement : MonoBehaviour
         //Instant directional change
         if(prevYAxis == 0 && yAxis > 0)
         {
-            rb.velocity = transform.up * 1f;
+            rb.velocity = transform.up * Mathf.Max(1f,rb.velocity.magnitude);
             boostParticles.Play();
         }
-        if(Input.GetKey(KeyCode.LeftShift))
+        if(Input.GetKeyDown(KeyCode.LeftShift))
         {
             isDrifting = true;
             driftParticles.Play();
         }
-        else
+        else if(Input.GetKeyUp(KeyCode.LeftShift))
         {
             isDrifting = false;
             driftParticles.Stop();
         }
-
+        //FOV
+        FOVController.instance.SetRatio(rb.velocity.magnitude / maxMovementSpeed);
     }
 
     void FixedUpdate() {
