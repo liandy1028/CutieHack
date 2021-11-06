@@ -26,7 +26,10 @@ public class mushroombullet : MonoBehaviour
 
     public void SetMoveDirection(Vector2 dir)
     {
-        moveDirection = dir;
+        moveDirection = Vector2.up;
+        transform.rotation = Quaternion.Euler(0,0,Mathf.Rad2Deg * Mathf.Atan2(dir.y,dir.x) - 90f);
+        
+        // moveDirection = dir;
     }
 
     private void Destroy()
