@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     private Vector2 moveDirection;
     private float moveSpeed;
+    Vector2 baseVelocity;
 
     private void OnEnable()
     {
@@ -22,18 +23,25 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+        transform.Translate(baseVelocity);
     }
 
     public void SetMoveDirection(Vector2 dir)
     {
-        SetMoveDirection(dir, 5);
+        SetMoveDirection(dir, 5, Vector2.zero);
     }
     public void SetMoveDirection(Vector2 dir, float speed)
     {
+        SetMoveDirection(dir, speed, Vector2.zero);
+    }
+    public void SetMoveDirection(Vector2 dir, float speed, Vector2 parentVelocity)
+    {
+        baseVelocity = parentVelocity;
         moveSpeed = speed;
         moveDirection = Vector2.up;
         transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * Mathf.Atan2(dir.y, dir.x) - 90f);
     }
+
 
     private void Destroy()
     {
