@@ -20,10 +20,10 @@ public class Bullet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
-        transform.Translate(baseVelocity);
+        transform.Translate(moveDirection * moveSpeed * Time.fixedDeltaTime);
+        transform.Translate(baseVelocity * Time.fixedDeltaTime, Space.World);
     }
 
     public void SetMoveDirection(Vector2 dir)

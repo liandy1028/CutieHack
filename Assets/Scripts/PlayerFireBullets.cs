@@ -41,6 +41,7 @@ public class PlayerFireBullets : MonoBehaviour
                 // bul.transform.rotation = transform.rotation;
                 // bul.transform.rotation = Quaternion.Euler(0,0,Mathf.Rad2Deg * Mathf.Atan2(bulDirY,bulDirX));
                 bul.SetActive(true);
+                print(GetComponentInParent<Rigidbody2D>().velocity);
                 bul.GetComponent<cutiebullet>().SetMoveDirection(bulDir, bulletspeed, GetComponentInParent<Rigidbody2D>().velocity);
 
             angle += angleStep;
