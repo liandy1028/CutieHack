@@ -33,7 +33,8 @@ public class FireBullets : MonoBehaviour
 
             GameObject bul = bulletpool.bulletPoolInstance.GetBullet();
                 bul.transform.position = transform.position;
-                bul.transform.rotation = Quaternion.Euler(0,0,Mathf.Rad2Deg * Mathf.Atan2(bulDirY,bulDirX));
+                // bul.transform.rotation = transform.rotation;
+                // bul.transform.rotation = Quaternion.Euler(0,0,Mathf.Rad2Deg * Mathf.Atan2(bulDirY,bulDirX));
                 bul.SetActive(true);
                 bul.GetComponent<mushroombullet>().SetMoveDirection(bulDir);
 
