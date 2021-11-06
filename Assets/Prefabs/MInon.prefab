@@ -116,7 +116,7 @@ MonoBehaviour:
   startAngle: 0
   endAngle: 0
   FiringPoint: {fileID: 8635090474934095277}
-  firerate: 0.4
+  firerate: 1.5
   bulletspeed: 10
 --- !u!1 &8635090474934095277
 GameObject:

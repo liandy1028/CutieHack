@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Leaderboard : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public int highScore;
+    string highScoreKey = "HighScore";
+
+    public Text Leaderbored;
+
     void Start()
     {
-        
+        highScore = PlayerPrefs.GetInt(highScoreKey, 0);
+        //use this value in whatever shows the leaderboard.
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Leaderbored.text = "HighScore: " + highScore.ToString();
     }
+
+
+
 }
