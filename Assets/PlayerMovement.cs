@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         if(!isDrifting)
         {
             if(yAxis > 0)
-                rb.velocity = (transform.up * movementSpeed * yAxis);
+                rb.velocity = (transform.up * maxMovementSpeed * yAxis);
             rb.AddTorque(xAxis * -rotationSpeed);
         }
     }

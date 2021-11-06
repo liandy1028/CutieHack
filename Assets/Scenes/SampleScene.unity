@@ -321,6 +321,8 @@ MonoBehaviour:
     prefab: {fileID: 6187147303679201, guid: 55464d5709306894a91dbd6f1118ee2c, type: 3}
   - key: cutieBullet
     prefab: {fileID: 6187147303679201, guid: 8db30496a18b2ef4894c4a294e6610b4, type: 3}
+  - key: minionBullet
+    prefab: {fileID: 6187147303679201, guid: d4b7e45fda8c5ed478be3ef4121593bc, type: 3}
 --- !u!4 &738832155
 Transform:
   m_ObjectHideFlags: 0
@@ -367,7 +369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49860760f3defe74fb8006725bda1059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 15
+  maxMovementSpeed: 0
+  movementAcceleration: 0
   rotationSpeed: 15
   rb: {fileID: 906534218}
 --- !u!50 &906534218
