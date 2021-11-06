@@ -5372,11 +5372,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516390077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.38912, y: -17.457926, z: 0.21567282}
-  m_LocalScale: {x: 9.19322, y: 9.19322, z: 9.19322}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 3}
   m_Children: []
-  m_Father: {fileID: 906534220}
-  m_RootOrder: 6
+  m_Father: {fileID: 1218824627}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &718248983
 GameObject:
@@ -5795,7 +5795,6 @@ Transform:
   - {fileID: 479078965}
   - {fileID: 718248984}
   - {fileID: 1453952269}
-  - {fileID: 516390079}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6007,6 +6006,51 @@ MonoBehaviour:
   FiringPoint: {fileID: 1402499407}
   firerate: 0.4
   bulletspeed: 10
+--- !u!1 &1218824626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1218824627}
+  - component: {fileID: 1218824628}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1218824627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218824626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 516390079}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1218824628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218824626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7f22af8d852f7449a5be99d1e39b25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 906534220}
 --- !u!1 &1350701831
 GameObject:
   m_ObjectHideFlags: 0
@@ -6196,7 +6240,7 @@ MonoBehaviour:
     weight: 1
   spawnTime: {x: 5, y: 7}
   spawnCount: {x: 1, y: 3}
-  spawnRadius: {x: 25, y: 40}
+  spawnRadius: {x: 40, y: 60}
 --- !u!1 &1687849687
 GameObject:
   m_ObjectHideFlags: 0
