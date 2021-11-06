@@ -45,7 +45,7 @@ public class GenericSpawner : MonoBehaviour
 
     private Spawnable GetRandomFromWeight()
     {
-        int rand = Random.Range(1, weightTotal);
+        int rand = Random.Range(1, weightTotal + 1);
         int current = 0;
         foreach (Spawnable spawn in spawns)
         {
