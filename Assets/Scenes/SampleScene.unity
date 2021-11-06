@@ -337,7 +337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293098042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01, y: -0.73841834, z: -0.07038021}
+  m_LocalPosition: {x: -0.01, y: 0.0153980255, z: -0.07038021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2033348565}
@@ -5320,7 +5320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718248983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.29, z: 0}
+  m_LocalPosition: {x: 0, y: 11.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 906534220}
@@ -5422,9 +5422,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BindingMode: 1
   m_FollowOffset: {x: 0, y: 0, z: -10}
-  m_XDamping: 0.2
-  m_YDamping: 0.2
-  m_ZDamping: 0.2
+  m_XDamping: 0.1
+  m_YDamping: 0.1
+  m_ZDamping: 0.1
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -5612,15 +5612,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49860760f3defe74fb8006725bda1059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMovementSpeed: 30
+  maxMovementSpeed: 35
   movementAcceleration: 60
   movementDeacceleration: 25
-  maxRotationSpeed: 160
-  maxRotationSpeedDrifting: 125
-  rotationAcceleration: 650
-  rotationDeacceleration: 400
-  normalHandling: 11
-  driftHandling: 1.5
+  maxRotationSpeed: 186
+  maxRotationSpeedDrifting: 135
+  rotationAcceleration: 700
+  rotationDeacceleration: 450
+  normalHandling: 15
+  driftHandling: 1.4
   driftParticles: {fileID: 496234539}
   boostParticles: {fileID: 1807270382}
   rb: {fileID: 906534218}
@@ -6253,7 +6253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707649033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: -0.73841834, z: -0.07038021}
+  m_LocalPosition: {x: -0.01, y: 0.0153980255, z: -0.07038021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 768186309}
@@ -6322,8 +6322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1707649036}
-  baseFOV: 10
-  maxFOV: 15
+  baseFOV: 8
+  maxFOV: 18
 --- !u!1 &1807270379
 GameObject:
   m_ObjectHideFlags: 0
