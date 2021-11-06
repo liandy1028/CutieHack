@@ -5378,6 +5378,49 @@ Transform:
   m_Father: {fileID: 1218824627}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &686121070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 686121072}
+  - component: {fileID: 686121071}
+  m_Layer: 0
+  m_Name: ScoreKeeper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &686121071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686121070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909ec4614bdfd3047b0b6958f1237b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &686121072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686121070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &718248983
 GameObject:
   m_ObjectHideFlags: 0
@@ -5699,11 +5742,11 @@ MonoBehaviour:
   movementAcceleration: 60
   movementDeacceleration: 25
   maxRotationSpeed: 186
-  maxRotationSpeedDrifting: 135
+  maxRotationSpeedDrifting: 130
   rotationAcceleration: 750
   rotationDeacceleration: 450
   normalHandling: 16
-  driftHandling: 1.4
+  driftHandling: 1.5
   driftParticles: {fileID: 496234539}
   boostParticles: {fileID: 1807270382}
   rb: {fileID: 906534218}
@@ -6099,10 +6142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b50e12997ad6d46ae1da39e2a4e9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletsAmount: 1
-  startAngle: 0
-  endAngle: 0
-  bulSpeed: 18.19
+  bulletsAmount: 10
+  startAngle: 90
+  endAngle: 270
+  bulSpeed: 25
 --- !u!114 &1350701833
 MonoBehaviour:
   m_ObjectHideFlags: 0
