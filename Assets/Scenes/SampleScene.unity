@@ -5617,9 +5617,9 @@ MonoBehaviour:
   movementDeacceleration: 25
   maxRotationSpeed: 186
   maxRotationSpeedDrifting: 135
-  rotationAcceleration: 700
+  rotationAcceleration: 750
   rotationDeacceleration: 450
-  normalHandling: 15
+  normalHandling: 16
   driftHandling: 1.4
   driftParticles: {fileID: 496234539}
   boostParticles: {fileID: 1807270382}
