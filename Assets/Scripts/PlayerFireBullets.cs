@@ -12,10 +12,15 @@ public class PlayerFireBullets : MonoBehaviour
 
     private Vector2 bulletMoveDirection;
 
+    public GameObject FiringPoint;
+
+    public float firerate;
+    public float bulletspeed;
+
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Fire", 0f, 0.1f);    
+        InvokeRepeating("Fire", 0f, firerate);
     }
     
     private void Fire()
@@ -32,11 +37,11 @@ public class PlayerFireBullets : MonoBehaviour
             Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
             GameObject bul = BulletPoolManager.instance.Pools["cutieBullet"].GetBullet();
-                bul.transform.position = transform.position;
+                bul.transform.position = FiringPoint.transform.position;
                 // bul.transform.rotation = transform.rotation;
                 // bul.transform.rotation = Quaternion.Euler(0,0,Mathf.Rad2Deg * Mathf.Atan2(bulDirY,bulDirX));
                 bul.SetActive(true);
-                bul.GetComponent<cutiebullet>().SetMoveDirection(bulDir, 20);
+                bul.GetComponent<cutiebullet>().SetMoveDirection(bulDir, bulletspeed);
 
             angle += angleStep;
         }
