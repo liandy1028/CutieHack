@@ -2,24 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bulletpool : MonoBehaviour
+public class bulletpool
 {
-    public static bulletpool bulletPoolInstance;
-
-    [SerializeField]
-    private GameObject pooledBullet;
+    public GameObject pooledBullet;
     private bool notEnoughBulletsInPool = true;
 
     private List<GameObject> bullets;
+    private Transform managerTransform;
 
-    private void Awake()
-    {
-        bulletPoolInstance = this;
-    }
 
     // Start is called before the first frame update
-    void Start()
+    public bulletpool(GameObject prefab, Transform parent)
     {
+        pooledBullet = prefab;
+        managerTransform = parent;
         bullets = new List<GameObject>();
     }
 
@@ -38,7 +34,7 @@ public class bulletpool : MonoBehaviour
 
         if (notEnoughBulletsInPool)
         {
-            GameObject bul = Instantiate(pooledBullet, transform);
+            GameObject bul = GameObject.Instantiate(pooledBullet, managerTransform);
             bul.SetActive(false);
             bullets.Add(bul);
             return bul;

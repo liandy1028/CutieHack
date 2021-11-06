@@ -31,7 +31,7 @@ public class FireBullets : MonoBehaviour
             Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
             Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
-            GameObject bul = bulletpool.bulletPoolInstance.GetBullet();
+            GameObject bul = BulletPoolManager.instance.Pools["mushroomBullet"].GetBullet();
                 bul.transform.position = transform.position;
                 // bul.transform.rotation = transform.rotation;
                 // bul.transform.rotation = Quaternion.Euler(0,0,Mathf.Rad2Deg * Mathf.Atan2(bulDirY,bulDirX));
