@@ -13,6 +13,12 @@ public class ScoreKeeper : MonoBehaviour
     public Text guiText;
     public Text highScoreText;
 
+    [ContextMenu("Reset highscore")]
+    void ResetHighscore()
+    {
+        PlayerPrefs.SetInt(highScoreKey, 0);
+        PlayerPrefs.Save();
+    }
     void Awake()
     {
         scoreKeeper = this;
