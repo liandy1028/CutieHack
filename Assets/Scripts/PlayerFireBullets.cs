@@ -12,7 +12,8 @@ public class PlayerFireBullets : MonoBehaviour
 
     private Vector2 bulletMoveDirection;
 
-    public GameObject FiringPoint;
+    public GameObject FiringPoint1;
+    public GameObject FiringPoint2;
 
     public float firerate;
     public float bulletspeed;
@@ -38,12 +39,18 @@ public class PlayerFireBullets : MonoBehaviour
             Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
             Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
-            GameObject bul = BulletPoolManager.instance.Pools["cutieBullet"].GetBullet();
-                bul.transform.position = FiringPoint.transform.position;
+            GameObject bul1 = BulletPoolManager.instance.Pools["cutieBullet"].GetBullet();
+                bul1.transform.position = FiringPoint1.transform.position;
                 // bul.transform.rotation = transform.rotation;
                 // bul.transform.rotation = Quaternion.Euler(0,0,Mathf.Rad2Deg * Mathf.Atan2(bulDirY,bulDirX));
-                bul.SetActive(true);
-                bul.GetComponent<Bullet>().SetMoveDirection(bulDir, bulletspeed, GetComponentInParent<Rigidbody2D>().velocity);
+                bul1.SetActive(true);
+                bul1.GetComponent<Bullet>().SetMoveDirection(bulDir, bulletspeed, GetComponentInParent<Rigidbody2D>().velocity);
+            GameObject bul2 = BulletPoolManager.instance.Pools["cutieBullet"].GetBullet();
+                bul2.transform.position = FiringPoint2.transform.position;
+                // bul.transform.rotation = transform.rotation;
+                // bul.transform.rotation = Quaternion.Euler(0,0,Mathf.Rad2Deg * Mathf.Atan2(bulDirY,bulDirX));
+                bul2.SetActive(true);
+                bul2.GetComponent<Bullet>().SetMoveDirection(bulDir, bulletspeed, GetComponentInParent<Rigidbody2D>().velocity);
 
             angle += angleStep;
         }
