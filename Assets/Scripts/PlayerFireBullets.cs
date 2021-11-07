@@ -25,6 +25,8 @@ public class PlayerFireBullets : MonoBehaviour
     
     private void Fire()
     {
+        if (!gameObject.activeSelf)
+            return;
         float angleStep = (endAngle - startAngle) / bulletsAmount;
         float angle = 360 - transform.rotation.eulerAngles.z;
 
