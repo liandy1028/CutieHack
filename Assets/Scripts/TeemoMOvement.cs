@@ -9,9 +9,11 @@ public class TeemoMOvement : MonoBehaviour
     public float sidewaysSpeedMultiplier;
     public float dist;
     GameObject player;
+    float spin;
     // Start is called before the first frame update
     void Start()
     {
+        spin = Mathf.Sign(Random.Range(-1f ,1f)); 
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -24,7 +26,7 @@ public class TeemoMOvement : MonoBehaviour
             transform.position += transform.up * speed * Time.fixedDeltaTime;
         }
         else {
-            transform.position += transform.right * sidewaysSpeedMultiplier * speed * Time.fixedDeltaTime;
+            transform.position += spin * transform.right * sidewaysSpeedMultiplier * speed * Time.fixedDeltaTime;
         }
     }
 }

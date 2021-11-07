@@ -8,9 +8,11 @@ public class minionMovement : MonoBehaviour
     public float sidewaysSpeedMultiplier;
     public float dist;
     GameObject player;
+    float spin;
     // Start is called before the first frame update
     void Start()
     {
+        spin = Mathf.Sign(Random.Range(-1f ,1f)); 
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -23,7 +25,7 @@ public class minionMovement : MonoBehaviour
             transform.position += transform.up * speed * Time.fixedDeltaTime;
         }
         else {
-            transform.position += transform.right * sidewaysSpeedMultiplier * speed * Time.fixedDeltaTime;
+            transform.position += transform.right * spin * sidewaysSpeedMultiplier * speed * Time.fixedDeltaTime;
         }
     }
 }
