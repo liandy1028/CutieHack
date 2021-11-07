@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void FixedUpdate() {
+        currentMovementSpeed = rb.velocity.magnitude;
         if(!isDrifting)
         {
             if (yAxis > 0)
