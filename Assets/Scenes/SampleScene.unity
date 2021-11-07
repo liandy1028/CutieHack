@@ -181,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137653363}
   - component: {fileID: 137653364}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Line (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,10 +342,10 @@ RectTransform:
   m_Father: {fileID: 1157089808}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -270, y: 180}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 264.4, y: -25.6}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228399199
 MonoBehaviour:
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.984145, b: 0.495283, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -369,12 +369,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 27
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -401,9 +401,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909ec4614bdfd3047b0b6958f1237b65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   highScore: 0
   guiText: {fileID: 228399199}
+  highScoreText: {fileID: 0}
 --- !u!1 &293098042
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +432,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293098042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.0153980255, z: -0.07038021}
+  m_LocalPosition: {x: -0.01, y: 0.0153980255, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2033348565}
@@ -564,7 +564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 479078965}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 496234537}
   - component: {fileID: 496234539}
   - component: {fileID: 496234538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DriftParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5424,10 +5424,10 @@ RectTransform:
   m_Father: {fileID: 1157089808}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -270, y: 150}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 264.4, y: -75.599976}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &498171444
 MonoBehaviour:
@@ -5442,7 +5442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.984145, b: 0.495283, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5451,12 +5451,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 27
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -5642,7 +5642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 718248984}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CameraTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5789,7 +5789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 813488966}
   - component: {fileID: 813488967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5931,7 +5931,8 @@ GameObject:
   - component: {fileID: 906534217}
   - component: {fileID: 906534221}
   - component: {fileID: 906534222}
-  m_Layer: 0
+  - component: {fileID: 906534223}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5954,11 +5955,11 @@ MonoBehaviour:
   movementAcceleration: 60
   movementDeacceleration: 25
   maxRotationSpeed: 186
-  maxRotationSpeedDrifting: 135
+  maxRotationSpeedDrifting: 130
   rotationAcceleration: 750
   rotationDeacceleration: 450
   normalHandling: 16
-  driftHandling: 1.4
+  driftHandling: 1.5
   driftParticles: {fileID: 496234539}
   boostParticles: {fileID: 1807270382}
   rb: {fileID: 906534218}
@@ -6042,7 +6043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906534216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: -3.77, z: -0.07037996}
+  m_LocalPosition: {x: -0.01, y: -3.77, z: 0}
   m_LocalScale: {x: 0.3263274, y: 0.3263274, z: 0.3263274}
   m_Children:
   - {fileID: 1687849688}
@@ -6088,6 +6089,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!114 &906534223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906534216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20d54b7c825e01448732a122c3771d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 1
 --- !u!1 &924498084
 GameObject:
   m_ObjectHideFlags: 0
@@ -6316,7 +6331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1453952269}
   - component: {fileID: 1453952270}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GenericSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6366,7 +6381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1687849688}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6381,7 +6396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687849687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.81, z: -5.6881604}
+  m_LocalPosition: {x: 0, y: 4.81, z: 0}
   m_LocalScale: {x: 3.0644069, y: 3.0644069, z: 3.0644069}
   m_Children: []
   m_Father: {fileID: 906534220}
@@ -6414,7 +6429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707649033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.0153980255, z: -0.07038021}
+  m_LocalPosition: {x: -0.01, y: 0.0153980255, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 768186309}
@@ -6496,7 +6511,7 @@ GameObject:
   - component: {fileID: 1807270380}
   - component: {fileID: 1807270382}
   - component: {fileID: 1807270381}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BoostParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}

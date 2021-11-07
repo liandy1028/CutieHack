@@ -49,12 +49,6 @@ public class Bullet : MonoBehaviour
 
     public void DestroyBullet()
     {
-        if (destroyParticles)
-        {
-            GameObject particles = Instantiate(destroyParticles.gameObject, transform.position, Quaternion.identity);
-            particles.GetComponent<ParticleSystem>().Play();
-            Destroy(particles, 1f);
-        }
         gameObject.SetActive(false);
     }
 
@@ -65,7 +59,7 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.layer == (col.gameObject.layer & targetMask.value))
+        if(1 << col.gameObject.layer == (1 << col.gameObject.layer & targetMask.value))
         {
             Entity hit = col.gameObject.GetComponent<Entity>();
             if(hit != null)
@@ -76,6 +70,12 @@ public class Bullet : MonoBehaviour
             if(bullet != null)
             {
                 bullet.DestroyBullet();
+            }
+            if (destroyParticles)
+            {
+                GameObject particles = Instantiate(destroyParticles.gameObject, transform.position, Quaternion.identity);
+                particles.GetComponent<ParticleSystem>().Play();
+                Destroy(particles, 1f);
             }
             DestroyBullet();
         }
