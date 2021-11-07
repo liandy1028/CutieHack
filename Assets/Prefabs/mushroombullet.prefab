@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6436730318710118121}
   - component: {fileID: 1033379722137150006}
   - component: {fileID: 2016884903749362089}
-  m_Layer: 0
+  - component: {fileID: 4649580355208580928}
+  m_Layer: 9
   m_Name: mushroombullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +98,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719a4e6cb159a074595bcc3bfe1a9e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 1216
+  destroyParticles: {fileID: 0}
   speedMultiplier: 3
+--- !u!58 &4649580355208580928
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6187147303679201}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1 &6333806794120499885
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +130,7 @@ GameObject:
   - component: {fileID: 4707863346982242445}
   - component: {fileID: 6081984474262061958}
   - component: {fileID: 2844583662062564784}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4913,7 +4934,7 @@ GameObject:
   - component: {fileID: 6328889412870752039}
   - component: {fileID: 8160846729581857452}
   - component: {fileID: 1473015353859214479}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trail (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -181,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137653363}
   - component: {fileID: 137653364}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Line (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 479078965}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 496234537}
   - component: {fileID: 496234539}
   - component: {fileID: 496234538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DriftParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5387,7 +5387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 718248984}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CameraTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5534,7 +5534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 813488966}
   - component: {fileID: 813488967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5676,7 +5676,8 @@ GameObject:
   - component: {fileID: 906534217}
   - component: {fileID: 906534221}
   - component: {fileID: 906534222}
-  m_Layer: 0
+  - component: {fileID: 906534223}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5699,11 +5700,11 @@ MonoBehaviour:
   movementAcceleration: 60
   movementDeacceleration: 25
   maxRotationSpeed: 186
-  maxRotationSpeedDrifting: 135
+  maxRotationSpeedDrifting: 130
   rotationAcceleration: 750
   rotationDeacceleration: 450
   normalHandling: 16
-  driftHandling: 1.4
+  driftHandling: 1.5
   driftParticles: {fileID: 496234539}
   boostParticles: {fileID: 1807270382}
   rb: {fileID: 906534218}
@@ -5833,6 +5834,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!114 &906534223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906534216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20d54b7c825e01448732a122c3771d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 1
 --- !u!1 &924498084
 GameObject:
   m_ObjectHideFlags: 0
@@ -5917,7 +5932,9 @@ GameObject:
   - component: {fileID: 950428397}
   - component: {fileID: 950428396}
   - component: {fileID: 950428399}
-  m_Layer: 0
+  - component: {fileID: 950428400}
+  - component: {fileID: 950428401}
+  m_Layer: 8
   m_Name: MInon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5998,7 +6015,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950428395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.21, y: 1.25, z: 0}
+  m_LocalPosition: {x: 29.7, y: 11.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1402499408}
@@ -6023,6 +6040,36 @@ MonoBehaviour:
   FiringPoint: {fileID: 1402499407}
   firerate: 0.4
   bulletspeed: 10
+--- !u!114 &950428400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950428395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20d54b7c825e01448732a122c3771d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
+  currentHealth: 2
+--- !u!58 &950428401
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950428395}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.31
 --- !u!1 &1218824626
 GameObject:
   m_ObjectHideFlags: 0
@@ -6080,7 +6127,9 @@ GameObject:
   - component: {fileID: 1350701834}
   - component: {fileID: 1350701833}
   - component: {fileID: 1350701832}
-  m_Layer: 0
+  - component: {fileID: 1350701836}
+  - component: {fileID: 1350701837}
+  m_Layer: 8
   m_Name: teemo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6174,12 +6223,42 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350701831}
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: 0, y: 5.65, z: 0}
+  m_LocalPosition: {x: -0.7, y: 22.7, z: 0}
   m_LocalScale: {x: 0.5083, y: 0.5083, z: 0.5083}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+--- !u!114 &1350701836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350701831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20d54b7c825e01448732a122c3771d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 4
+  currentHealth: 4
+--- !u!58 &1350701837
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350701831}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 5
 --- !u!1 &1402499407
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,7 +6268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1402499408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6220,7 +6299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1453952269}
   - component: {fileID: 1453952270}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GenericSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6268,7 +6347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1687849688}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6398,7 +6477,7 @@ GameObject:
   - component: {fileID: 1807270380}
   - component: {fileID: 1807270382}
   - component: {fileID: 1807270381}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BoostParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}

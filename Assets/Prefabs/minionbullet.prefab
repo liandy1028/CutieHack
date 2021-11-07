@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6436730318710118121}
   - component: {fileID: 1033379722137150006}
   - component: {fileID: -1493739466250481451}
-  - component: {fileID: -6668659385991231019}
-  m_Layer: 0
+  - component: {fileID: 66682257769839614}
+  m_Layer: 9
   m_Name: minionbullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,8 +96,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3748460761ea649bb8b91da3fdf49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!70 &-6668659385991231019
-CapsuleCollider2D:
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 1216
+  destroyParticles: {fileID: 0}
+--- !u!58 &66682257769839614
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -109,6 +113,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.60559267}
-  m_Size: {x: 1.1399966, y: 1.1488156}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6
