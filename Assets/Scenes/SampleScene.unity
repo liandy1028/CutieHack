@@ -15395,7 +15395,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 75ab74814c75c78448d138731c4e07b7, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -20189,9 +20189,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1707649036}
-  baseFOV: 10
-  maxFOV: 18
-  smoothSpeed: 10000000
+  baseFOV: 11
+  maxFOV: 20
+  smoothSpeed: 20
 --- !u!1 &1758973011
 GameObject:
   m_ObjectHideFlags: 0

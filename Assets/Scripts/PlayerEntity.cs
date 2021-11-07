@@ -10,7 +10,7 @@ public class PlayerEntity : Entity
     {
         if(1 << coll.gameObject.layer == (1 << coll.gameObject.layer & hazardMask.value))
         {
-            EntityDie();
+            //EntityDie();
         }
     }
 
