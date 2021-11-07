@@ -4,38 +4,27 @@ using UnityEngine;
 
 public class TeemoMOvement : MonoBehaviour
 {
-    private float moveSpeed;
-    private bool moveRight;
-
-
+    
+    public float speed;
+    public float sidewaysSpeedMultiplier;
+    public float dist;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 2f;
-        moveRight = true;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(transform.position.x > 7f)
-        {
-            moveRight = false;
+        Vector3 dir = player.transform.position - transform.position;
+        transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * Mathf.Atan2(dir.y, dir.x) - 90f);
+        if (Vector3.Distance(transform.position, player.transform.position) > dist) {    
+            transform.position += transform.up * speed * Time.fixedDeltaTime;
         }
-        else if ( transform.position.x < -7f)
-        {
-            moveRight = true;
-        }
-
-        if (moveRight)
-        {
-            transform.position = new Vector2(transform.position.x + moveSpeed * Time.deltaTime,
-                transform.position.y);
-        }
-        else
-        {
-            transform.position = new Vector2(transform.position.x - moveSpeed * Time.deltaTime,
-                transform.position.y);
+        else {
+            transform.position += transform.right * sidewaysSpeedMultiplier * speed * Time.fixedDeltaTime;
         }
     }
 }
