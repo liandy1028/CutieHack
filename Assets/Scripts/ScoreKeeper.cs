@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScoreKeeper : MonoBehaviour
 {
     public static ScoreKeeper scoreKeeper;
-    private int score = -1;
+    public int score = -1;
     public int highScore = 0;
     string highScoreKey = "HighScore";
 
@@ -29,6 +29,7 @@ public class ScoreKeeper : MonoBehaviour
         //Get the highScore from player prefs if it is there, 0 otherwise.
         highScore = PlayerPrefs.GetInt(highScoreKey, 0);
         IncrementScore();
+        highScoreText.text = "High Score: " + highScore;
     }
 
     public void IncrementScore()

@@ -12,7 +12,7 @@ public class mushroombullet : Bullet
         straight = true;
         Invoke("Home", 1f);
         Invoke("Straight", 3f);
-        Invoke("DestroyBullet", 5f);
+        Invoke("DestroyBullet", 10f);
     }
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
