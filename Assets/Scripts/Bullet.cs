@@ -8,9 +8,13 @@ public class Bullet : MonoBehaviour
     protected float moveSpeed;
     Vector2 baseVelocity;
 
+    public LayerMask targetMask;
+
+    public ParticleSystem destroyParticles;
+
     private void OnEnable()
     {
-        Invoke("Destroy", 5f);
+        Invoke("DestroyBullet", 5f);
     }
 
     // Start is called before the first frame update
@@ -43,13 +47,37 @@ public class Bullet : MonoBehaviour
     }
 
 
-    private void Destroy()
+    public void DestroyBullet()
     {
+        if (destroyParticles)
+        {
+            GameObject particles = Instantiate(destroyParticles.gameObject, transform.position, Quaternion.identity);
+            particles.GetComponent<ParticleSystem>().Play();
+            Destroy(particles, 1f);
+        }
         gameObject.SetActive(false);
     }
 
     private void OnDisable()
     {
         CancelInvoke();
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.layer == (col.gameObject.layer & targetMask.value))
+        {
+            Entity hit = col.gameObject.GetComponent<Entity>();
+            if(hit != null)
+            {
+                hit.TakeDamage(1);
+            }
+            Bullet bullet = col.gameObject.GetComponent<Bullet>();
+            if(bullet != null)
+            {
+                bullet.DestroyBullet();
+            }
+            DestroyBullet();
+        }
     }
 }
