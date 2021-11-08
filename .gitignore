@@ -58,3 +58,19 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+WebGLBuild/index.html
+WebGLBuild/Build/WebGLBuild.data
+WebGLBuild/Build/WebGLBuild.framework.js
+WebGLBuild/Build/WebGLBuild.loader.js
+WebGLBuild/Build/WebGLBuild.wasm
+WebGLBuild/TemplateData/favicon.ico
+WebGLBuild/TemplateData/fullscreen-button.png
+WebGLBuild/TemplateData/progress-bar-empty-dark.png
+WebGLBuild/TemplateData/progress-bar-empty-light.png
+WebGLBuild/TemplateData/progress-bar-full-dark.png
+WebGLBuild/TemplateData/progress-bar-full-light.png
+WebGLBuild/TemplateData/style.css
+WebGLBuild/TemplateData/unity-logo-dark.png
+WebGLBuild/TemplateData/unity-logo-light.png
+WebGLBuild/TemplateData/webgl-logo.png
+WebGLBuild.zip

@@ -20176,8 +20176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1707649036}
-  baseFOV: 11
-  maxFOV: 20
+  baseFOV: 13
+  maxFOV: 23
   smoothSpeed: 20
 --- !u!1 &1758973011
 GameObject:
